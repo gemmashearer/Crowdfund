@@ -1,9 +1,13 @@
-project1 ='ABC'
-funding1 = 1000
-puts "Project #{project1} has $#{funding1} in funding."
+project1 ='rpsca'
+project2 ='nspcc'
+project3 ='marie Curie Cancer Care'
 
-project2 ="LMN"
-project3 ="XYZ"
+funding1 = "£1000"
+funding2 = "£2000"
+funding3 = "£10,000"
 
-puts"Projects:\n\t#{project1}\n\t#{project2}\n\t#{project3}"
+puts "The #{project1.upcase.ljust(20, '.')} has $#{funding1} in funding."
 
+puts "The #{project2.upcase.ljust(20, '.')} has #{funding2} in funding."
+
+puts "The #{project3.capitalize.ljust(20, '.')} has #{funding3} in funding." 
