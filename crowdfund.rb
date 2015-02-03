@@ -1,13 +1,15 @@
-project1 ='rpsca'
-project2 ='nspcc'
-project3 ='marie Curie Cancer Care'
+def day
+  current_time = Time.new
+  current_time.strftime("%A")
+end
 
-funding1 = "£1000"
-funding2 = "£2000"
-funding3 = "£10,000"
+def charity(name, amount="£5000")
+  "#{name.upcase} has raised a total of #{amount} as of #{day.capitalize}."
+end
 
-puts "The #{project1.upcase.ljust(20, '.')} has $#{funding1} in funding."
+puts charity("rspca", "£1000")
+puts charity("nspcc", "£2000")
+puts charity("Marie Curie Cancer Care", "£10,000")
 
-puts "The #{project2.upcase.ljust(20, '.')} has #{funding2} in funding."
 
-puts "The #{project3.capitalize.ljust(20, '.')} has #{funding3} in funding." 
+
