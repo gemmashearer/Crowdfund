@@ -1,15 +1,37 @@
-def day
-  current_time = Time.new
-  current_time.strftime("%A")
+class Project
+  def initialize(name, initial, target)
+    @name = name.upcase
+    @initial = initial
+    @target = target
+  end
+  
+  def to_s
+    "#{@name} has $#{@initial} in funding towards a goal of $#{@target}."
+  end
+  
+  def lost
+    @initial -= 15
+    puts "#{@name} has lost some funds!"
+  end
+  
+  def got
+    @initial += 50
+    puts "#{@name} has got some funds!"
+  end
 end
 
-def charity(name, amount="£5000")
-  "#{name.upcase} has raised a total of #{amount} as of #{day.capitalize}."
-end
 
-puts charity("rspca", "£1000")
-puts charity("nspcc", "£2000")
-puts charity("Marie Curie Cancer Care", "£10,000")
+project1 = Project.new("lmn", 500, 3000)
+puts project1
+project1.lost
+puts project1
 
+project2 = Project.new("xyz", 25, 75)
+puts project2
+project2.got
+puts project2
+
+project3 = Project.new("kpr", 500, 3000)
+puts project3
 
 
